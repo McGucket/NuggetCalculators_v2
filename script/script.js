@@ -27,7 +27,7 @@ function storeSalary(id) {
 }
 
 function validateForm() {
-    var fields = document.getElementsByClassName("input-field").value;
+    var fields = document.getElementsByClassName("input-field-q1").value;
     console.log(fields);
 
     if (fields == undefined) {
@@ -37,7 +37,7 @@ function validateForm() {
         document.getElementById("error-msg").style.marginLeft = "80px";
         document.getElementById("error-msg").style.fontStyle = "italic";
     }
-    else{
+    else {
         tabulateWeeklyBudget();
     }
 }
@@ -62,6 +62,7 @@ function createSlider() {
     slider.setAttribute("id", "save-amt");
     slider.setAttribute("min", "0");
     slider.setAttribute("max", maxVal);
+    slider.setAttribute("value", null);
     document.getElementById("slider-field").appendChild(slider);
 }
 
@@ -88,12 +89,12 @@ function tabulateWeeklyBudget() {
     sessionStorage.setItem("budget", amtAfterReduc);
 }
 
-function getWeeklyBudget(){
+function getWeeklyBudget() {
     let parentDiv = document.getElementById("circle-amt");
     let para = document.createElement("p");
     let weeklyBudget = sessionStorage.getItem("budget");
     var budget = document.createTextNode(weeklyBudget);
-    para.appendChild(budget);  
+    para.appendChild(budget);
     console.log(para);
 
     parentDiv.appendChild(para);
