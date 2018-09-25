@@ -37,9 +37,8 @@ function validateForm() {
         document.getElementById("error-msg").style.marginLeft = "80px";
         document.getElementById("error-msg").style.fontStyle = "italic";
     }
-    else {
         tabulateWeeklyBudget();
-    }
+
 }
 
 function getSalaryAmt() {
@@ -48,7 +47,7 @@ function getSalaryAmt() {
 
     slider.setAttribute("max", salaryAmt);
     let sliderDiv = document.getElementById("slider-field");
-    sliderDiv.insertBefore(slider, sliderDiv.childNodes[2]);
+    sliderDiv.insertBefore(slider, sliderDiv.childNodes[4]);
     return salaryAmt;
 }
 
@@ -93,9 +92,9 @@ function getWeeklyBudget() {
     let parentDiv = document.getElementById("circle-amt");
     let para = document.createElement("p");
     let weeklyBudget = sessionStorage.getItem("budget");
+    parseFloat(weeklyBudget);
+    weeklyBudget = Math.floor(weeklyBudget);
     var budget = document.createTextNode(weeklyBudget);
     para.appendChild(budget);
-    console.log(para);
-
     parentDiv.appendChild(para);
 }

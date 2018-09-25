@@ -45,9 +45,12 @@
       <h2>Enter your monthly take-home pay</h2>
       <span id="error-msg"></span>
       <div class="page-buttons">
-        <a href="#salary-question" class="circle-button"></a>
+        <a href="#home" class="home-button"><img src="src/home.png" title="home" alt="home" width="25" height="25"></a>
+        <a href="#salary-question" class="circle-button active"></a>
         <a href="#bills-question" class="circle-button"></a>
         <a href="#savings-question" class="circle-button"></a>
+
+
       </div>
       <form method="POST" action="viewResults.html">
         <div class="input-field input-field-q1">
@@ -62,8 +65,9 @@
       <p style="color:#00d0a0; text-align: center; font-size: 20px;">Leave field empty if it’s not applicable.</p>
       <p class="total-bills-para">Total : $<span id="total-bills">0</span></p>
       <div class="page-buttons">
+        <a href="#home" class="home-button"><img src="src/home.png" title="home" alt="home" width="25" height="25"></a>
         <a href="#salary-question" class="circle-button"></a>
-        <a href="#bills-question" class="circle-button"></a>
+        <a href="#bills-question" class="circle-button active"></a>
         <a href="#savings-question" class="circle-button"></a>
       </div>
       <div class="bills-web">
@@ -166,14 +170,15 @@
     <section id="savings-question" class="savings-question">
       <h2>Enter your savings target amount</h2>
       <div class="page-buttons">
+        <a href="#home" class="home-button"><img src="src/home.png" title="home" alt="home" width="25" height="25"></a>
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
-        <a href="#savings-question" class="circle-button"></a>
+        <a href="#savings-question" class="circle-button active"></a>
       </div>
 
       <div class="slider-field" id="slider-field">
           <p class="save-value"><input id="value" class="savings-amt" type="number" onchange="snapSavingsValue()" placeholder="e.g $3000" autocomplete="off"></p>
-          <p style="color:#00d0a0; text-align: center; margin-top:-20px;">Whole amount</p> <br><br><br>
+          <p class="whole-amt-text">Whole amount</p>
         <script>
           createSlider();
         </script>
