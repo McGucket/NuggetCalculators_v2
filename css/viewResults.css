@@ -23,7 +23,7 @@ h3 {
   font-weight: 400;
   color: #f3f3f3;
   font-size: 50px;
-  text-align: center;
+  text-align:center;
 }
 
 .circle-amt {
@@ -38,7 +38,25 @@ h3 {
 
 .circle-amt p {
   color: #f3f3f3;
-  font-size: 60px;
+  text-align:center;
+  margin-top:50px;
+  font-size:100px;
+}
+
+.dollar-sign{
+  color:#f3f3f3;
+  font-size:30px;
+  position:absolute;
+  left:42.7%;
+  top:37.4%;
+}
+
+.per-week{
+  color:#f3f3f3;
+  font-size:40px;
+  position:absolute;
+  left:43.7%;
+  top:41.5%;
 }
 
 .text-below-circle {
@@ -79,14 +97,6 @@ h1 {
       background: linear-gradient(to top, #24a9c5, #00d0a0);
       background-repeat: no-repeat;
       height:768px;
-  }
-
-  h3{
-    font-weight:400;
-    color:#f3f3f3;
-    font-size:50px;
-    margin-left:520px;
-    margin-top: 0px;
   }
 
   .circle-amt{
@@ -236,7 +246,6 @@ input[type=email], select {
   font-size: 25px;
   font-family: "Poppins";
   box-sizing: border-box;
-}
   background-color: transparent;
   border: 2px solid #f3f3f3;
   }
@@ -332,7 +341,7 @@ input[type=email], select {
   }
 
   /* Mobile CSS */
-@media only screen and (max-width: 767.98px) and (min-width:576px) {
+@media only screen and (max-width: 767.98px){
     body {
         font-family: "Roboto";
         max-width: 767.98px;
