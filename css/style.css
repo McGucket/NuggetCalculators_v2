@@ -22,9 +22,9 @@ body {
 .title h1 {
   color: white;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 39px;
   text-align: center;
-  /* margin-top: 0px; */
+  margin-bottom: 0px;
 }
 
 .nugget-logo {
@@ -41,18 +41,29 @@ body {
   height: 168px;
   color: #f3f3f3;
   font-weight: 400;
-  font-size: 24px;
-  margin-top: 90px;
+  font-size: 28px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  letter-spacing: 2px;
+}
+
+.pro-tip {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+  color: #f3f3f3;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
 }
 
 a,
 button {
   display: block;
   margin: 0 auto;
-  margin-top: 160px;
+  /* margin-top: 160px; */
   width: 300px;
   height: 62px;
   font-size: 30px;
@@ -70,6 +81,14 @@ button {
 
 .continue,
 button {
+  background-color: #f3f3f3;
+  border: 2px solid #24a9c5;
+  color: #24a9c5;
+}
+
+.continue:hover,
+button:hover {
+  color: #f3f3f3;
   background-color: #24a9c5;
 }
 
@@ -77,11 +96,14 @@ button {
   margin-top: 190px;
 }
 
-a:hover,
-button:hover {
+a:hover{
   color: #24a9c5;
   background-color: #f3f3f3;
   border: 2px solid #24a9c5;
+}
+
+.sub-section-button{
+  margin-top: 90px;
 }
 
 /* Questionnaire Portion */
@@ -94,19 +116,12 @@ button:hover {
   border: 1px solid #f3f3f3;
 }
 
-.pro-tip {
-  color: #666666;
-  width: fit-content;
-  margin: 0 auto;
-  padding-top: 20px;
-  margin-bottom: 25px;
-}
-
 h2 {
   color: #00d0a0;
   font-size: 36px;
   font-weight: 600;
-  margin-left: 80px;
+  margin-top: 245px;
+  text-align: center;
   /* border: red solid 1px; */
 }
 
@@ -131,13 +146,16 @@ input[type="number"] {
 /* Salary Question */
 
 .salary-question {
-  min-height: 728px;
+  min-height: 768px;
+  margin: 56px 60px 56px 60px;
 }
 
 .salary-question .input-field {
-  width: 654px;
+  /* border: yellow solid 1px; */
+  width: 660px;
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 label {
@@ -170,6 +188,48 @@ label {
   width: 100%;
 }
 
+.salary-amt::-webkit-input-placeholder,
+.savings-amt::-webkit-input-placeholder,
+.utilities::-webkit-input-placeholder,
+.rent::-webkit-input-placeholder,
+.insurance::-webkit-input-placeholder,
+.parents::-webkit-input-placeholder,
+.others::-webkit-input-placeholder,
+.subscriptions::-webkit-input-placeholder
+ {
+  text-align: center;
+  color: #d8d8d8;
+  font-weight:550;
+}
+
+.salary-amt:-moz-placeholder,
+.savings-amt:-moz-placeholder,
+.utilities::-webkit-input-placeholder,
+.rent::-webkit-input-placeholder,
+.insurance::-webkit-input-placeholder,
+.parents::-webkit-input-placeholder,
+.others::-webkit-input-placeholder,
+.subscriptions::-webkit-input-placeholder
+ {
+  text-align: center;
+  color: #d8d8d8;  
+  font-weight:550;
+}
+
+.salary-amt:-ms-input-placeholder,
+.savings-amt:-ms-input-placeholder,
+.utilities::-webkit-input-placeholder,
+.rent::-webkit-input-placeholder,
+.insurance::-webkit-input-placeholder,
+.parents::-webkit-input-placeholder,
+.others::-webkit-input-placeholder,
+.subscriptions::-webkit-input-placeholder
+ {  
+  text-align: center;
+  color: #d8d8d8; 
+  font-weight:550;
+}
+
 .page-buttons {
   float: right;
   margin-top: 80px;
@@ -185,15 +245,16 @@ label {
   border-radius: 50%;
 }
 
+
 .circle-button:active {
   border: 2px solid #666666;
   background-color: #f3f3f3;
 }
 
-.circle-button:hover {
+/* .circle-button:hover {
   border: 2px solid #666666;
   background-color: #f3f3f3;
-}
+} */
 
 /* Bills Question */
 
@@ -267,9 +328,10 @@ table label {
 }
 
 .total-bills-para{
-  width:fit-content;
-  position: absolute;
-  right: 5%;
+  float:right;
+  margin-top:-117px;
+  margin-right:300px;
+  color: #50a7c2;
 }
 
 /* Saving Question*/
@@ -323,21 +385,23 @@ table label {
   margin-top: 170px;
 }
 
-.salary-amt-label{
-  color:#c5c5c5;
-  font-size: 20px;
-  text-align: center;
+.below-slider-text{
+  color:#00d0a0;
+  /* text-align: center; */
+  margin-left:22%;
 }
 
 .max-percentage {
   float:right;
   font-weight:400;
-  color:#c5c5c5
+  font-size:30px;
+  color:#00d0a0;
 }
 
 .min-percentage{
   font-weight:400;
-  color:#c5c5c5;
+  font-size:30px;
+  color:#00d0a0;
 }
 
 h3{
@@ -355,7 +419,7 @@ h3{
 
 .save-value input {
   outline: none;
-  width:100px;
+  width:250px;
   text-align:center;
   background-color:#f3f3f3;
   border: none;
@@ -390,203 +454,3 @@ button{
   text-align:center;
 }
 
-/* Mobile CSS */
-@media only screen and (max-width: 767.98px) and (min-width:576px) {
-  body {
-    font-family: "Roboto";
-    max-width: 767.98px;
-    overflow-y:visible;
-    padding:0;
-    margin:0;
-  }
-  .title h1 {
-    font-size: 48px;
-  }
-  .first-para {
-    font-size: 21px;
-    margin-top:70px;
-    width: 400px;
-  }
-
-  .page-buttons {
-    display: none;
-  }
-  /* Salary question */
-  .pro-tip { 
-    color: #666666;
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 14px;
-    padding-top: 20px;
-    margin-bottom: 25px;
-  }
-  h2 {
-    color: #00d0a0;
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: 10px;
-    margin-top: 50px;
-  }
-  label {
-    color: #666666;
-    font-size: 24px;
-    font-weight: 600;
-  }
-  .continue {
-    display: none;
-  }
-  /* Salary Question */
-  .salary-question {
-    min-height: 720px;
-    background-color: whitesmoke;
-  }
-  .salary-question .input-field {
-    border-bottom: none;
-    width: 260px;
-    margin-top: 170px;
-  }
-
-  input[type="text"]
-{
-    font-size:20px;
-}
-
-  /* Bills Question */
-  .bills-question {
-    min-height: 720px;
-  }
-  .space {
-    margin-top: 0px;
-  }
-  .bills-web {
-    display: none;
-  }
-
-  input[type="text"]
-  {
-      font-size:20px;
-  }
-
-  .bills-mobile {
-    display: block;
-    margin-right:150px;
-  }
-  .bills-mobile .input-field {
-    width: 260px;
-  }
-  .bills-mobile input {
-    width: 100%;
-    height: 50px;
-    font-size: 30px;
-    color: #666666;
-    border: none;
-    border-bottom: 2px solid #666666;
-    outline: none;
-  }
-  .bills-question input:focus {
-    border-bottom: none;
-  }
-  .bills-question input:focus+.slide {
-    background-color: #28a6c1;
-    width: 100%;
-  }
-  .bills-question .continue {
-    margin-top: 0px;
-  }
-
-  /* savings qn */
-
-  .savings-question {
-    max-width:767.98px;
-  }
-
-
-.savings-question .pro-tip{
-  padding-top:120px;
-}
-
-.slider-field{
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 60px;
-}
-
-.save-amt{
-  -webkit-appearance: none;
-  width: 70%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  margin-left:60px;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.salary-amt-label{
-  color:#c5c5c5;
-  font-size: 15px;
-  margin-left:30px;
-}
-
-.max-percentage{
-  float:none;
-  margin-left:290px;
-  font-weight:400;
-  color:#c5c5c5;
-}
-
-.bills-question input[type="text"]
-{
-    font-size:20px;
-}
-
-.min-percentage{
-  margin-left:64px;
-}
-
-.min-positioning{
-  margin-top:0px;
-}
-
-.max-positioning{
-  margin-top:-20px;
-  }
-
-  h3{
-    font-size:40px;
-    margin-left:50px;
-    padding-top:130px;
-  }
-
-  .circle-amt{
-    width:200px;
-    height:200px;
-  }
-
-  .text-below-circle{
-    font-size:20px;
-  }
-}
-
-@media only screen and (max-width: 991.98px) and (min-width:768px) {
-  body {
-    margin: 0 auto;
-    padding: 0;
-  }
-  .title h1 {
-    font-size: 28px;
-  }
-  .first-para {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .first-para fieldset {
-    font-size: 18px;
-  }
-  .start-now {
-    width: 80%;
-  }
-}

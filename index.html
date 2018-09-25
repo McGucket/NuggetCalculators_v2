@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <link href="css/style.css" rel="stylesheet">
-  <script src="../NuggetCalculator/script/script.js"></script>
+  <script src="../NuggetCalculators_v2/script/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -24,18 +24,25 @@
   <section id="home">
     <div class="home-background">
       <div class="title">
-        <img class="nugget-logo" src="src/Nugget_Logo_Square_White.png" title="Nugget-Logo" alt="Nugget-Logo" width="120" />
+        <img class="nugget-logo" src="src/Nugget_Logo_Square_White.png" title="Nugget-Logo" alt="Nugget-Logo" width="297"
+          height="317" />
         <h1>Budget Planner</h1>
       </div>
       <div class="first-para">
-        Get your budget in less than 3 minutes by answering 3 simple questions!
-        <a class="start-now" href="#salary-question">Start Now</a>
+        Get your budget in 3 simple steps
+        <div class="sub-section-button">
+        <div class="pro-tip">
+          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+          All entered data will be deleted when you close the tab.
+        </div>
+        <a class="start-now" href="#salary-question">Start</a>
+      </div>
       </div>
     </div>
   </section>
   <div class="quiz-content">
     <section id="salary-question" class="salary-question">
-      <h2>What's your monthly take home salary?</h2>
+      <h2>Enter your monthly take-home pay</h2>
       <span id="error-msg"></span>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
@@ -43,21 +50,17 @@
         <a href="#savings-question" class="circle-button"></a>
       </div>
       <form method="POST" action="viewResults.html">
-        <div class="input-field">
-          <label for="salary-amt">Your Salary </label><br>
+        <div class="input-field input-field-q1">
           <input type="number" name="salary-amt" id="salary-amt" class="salary-amt" placeholder="eg. $3000" onchange="storeSalary(id)"
             autocomplete="off" required>
           <div class="slide" id="slide"></div>
         </div>
-        <div class="pro-tip">
-          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-          All entered data will be deleted when you exit this page
-        </div>
         <a class="continue" href="#bills-question">Continue</a>
     </section>
     <section id="bills-question" class="bills-question">
-      <h2>How much are your monthly bills?</h2>
-      <p class="total-bills-para">Total Monthly Bills: $<span id="total-bills">0</span></p>
+      <h2>Enter your monthly bill amount</h2>
+      <p style="color:#00d0a0; text-align: center; font-size: 20px;">Leave field empty if it’s not applicable.</p>
+      <p class="total-bills-para">Total : $<span id="total-bills">0</span></p>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
@@ -121,10 +124,10 @@
             </td>
           </tr>
         </table>
-        <div class="pro-tip">
+        <!-- <div class="pro-tip">
           <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
           All entered data will be deleted when you exit this page
-        </div>
+        </div> -->
       </div>
       <div class="bills-mobile">
         <div class="input-field">
@@ -161,7 +164,7 @@
       <a class="continue" href="#savings-question">Continue</a>
     </section>
     <section id="savings-question" class="savings-question">
-      <h2>How much of your salary would you like to save every month?</h2>
+      <h2>Enter your savings target amount</h2>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
@@ -169,18 +172,21 @@
       </div>
 
       <div class="slider-field" id="slider-field">
-        <p class="salary-amt-label">* Use the slider to change the amount</p><br><br>
+          <p class="save-value"><input id="value" class="savings-amt" type="number" onchange="snapSavingsValue()" placeholder="e.g $3000" autocomplete="off"></p>
+          <p style="color:#00d0a0; text-align: center; margin-top:-20px;">Whole amount</p> <br><br><br>
         <script>
           createSlider();
         </script>
         <span class="min-percentage">0%</span>
+        <span class="below-slider-text">Percentage of your take-home pay</span>
+        
         <span class=" max-percentage">100%</span>
 
-        <p class="save-value">Value($): <input id="value" type="text" onchange="snapSavingsValue()"></p>
-        <div class="pro-tip">
+        
+        <!-- <div class="pro-tip">
           <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
           All entered data will be deleted when you exit this page
-        </div>
+        </div> -->
         <script>
           var slider = document.getElementById("save-amt");
           var output = document.getElementById("value");
