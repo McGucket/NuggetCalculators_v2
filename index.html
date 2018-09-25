@@ -31,12 +31,12 @@
       <div class="first-para">
         Get your budget in 3 simple steps
         <div class="sub-section-button">
-        <div class="pro-tip">
-          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-          All entered data will be deleted when you close the tab.
+          <div class="pro-tip">
+            <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+            All entered data will be deleted when you close the tab.
+          </div>
+          <a class="start-now" href="#salary-question">Start</a>
         </div>
-        <a class="start-now" href="#salary-question">Start</a>
-      </div>
       </div>
     </div>
   </section>
@@ -182,23 +182,28 @@
         <script>
           createSlider();
         </script>
+        <div class="tooltip" id="tooltip">0%</div>
         <span class="min-percentage">0%</span>
         <span class="below-slider-text">Percentage of your take-home pay</span>
-        
-        <span class=" max-percentage">100%</span>
 
-        
-        <!-- <div class="pro-tip">
-          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-          All entered data will be deleted when you exit this page
-        </div> -->
+        <span class=" max-percentage">100%</span>
         <script>
           var slider = document.getElementById("save-amt");
           var output = document.getElementById("value");
+          var tooltip = document.getElementById("tooltip");
           output.value = slider.value;
+          var salaryAmt = sessionStorage.getItem("salary-amt");
+
 
           slider.oninput = function () {
+            var sliderAmt = document.getElementById("save-amt").value;
             output.value = this.value;
+            let shiftVal = sliderAmt * (604 / salaryAmt);
+            let percentage = sliderAmt * (100 / salaryAmt);
+            parseFloat(percentage);
+            percentage = Math.floor(percentage);
+            tooltip.style.left = shiftVal + "px";
+            tooltip.innerHTML = percentage + "%";
           }
         </script>
 

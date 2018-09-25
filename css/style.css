@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: "Poppins";
-  overflow-y:hidden;
+  /* overflow-y:hidden; */
 }
 
 .home-background {
@@ -120,7 +120,7 @@ h2 {
   color: #00d0a0;
   font-size: 36px;
   font-weight: 600;
-  margin-top: 245px;
+  margin-top: 200px;
   text-align: center;
   /* border: red solid 1px; */
 }
@@ -148,6 +148,7 @@ input[type="number"] {
 .salary-question {
   min-height: 768px;
   margin: 56px 60px 56px 60px;
+  padding-top: px;
 }
 
 .salary-question .input-field {
@@ -184,7 +185,6 @@ label {
 }
 
 .salary-amt:focus+.slide {
-  background-color: #28a6c1;
   width: 100%;
 }
 
@@ -251,6 +251,7 @@ label {
   background-color: #f3f3f3;
 }
 
+<<<<<<< HEAD
 .active, .circle-button:hover {
   border: 3px solid #666666;
   background-color: #f3f3f3;
@@ -262,6 +263,8 @@ label {
   height:25px;
 }
 
+=======
+>>>>>>> 5b25696397f805083ca175616cefe5fd93c5983a
 /* Bills Question */
 
 .bills-mobile {
@@ -277,29 +280,32 @@ label {
 }
 
 table {
-
   width: 1072px;
   height: 442px;
   margin: 0 auto;
   margin-top: 0px;
 }
 
+td{
+  padding:0;
+}
+
 table img {
-  width: 130px;
-  height: 130px;
+  width: 85px;
+  height: 85px;
   margin-left: 12%;
   float: left;
 }
 
 table label {
-  font-size: 21px;
+  font-size: 24px;
 }
 
 .bills-question .input-field {
-  width: 110px;
-  margin-top: 3%;
+  width: 185px;
+  margin-top: -20px;
+  margin-left:-40px;
   font-size: 30px;
-  margin-right: 12%;
   float: right;
 }
 
@@ -318,6 +324,7 @@ table label {
   border-bottom: 2px solid #666666;
   outline: none;
   background-color: #f3f3f3;
+  margin-top: 0px;
 }
 
 .bills-question input:focus {
@@ -366,6 +373,31 @@ table label {
   border-radius: 50%;
   background: #666666;
   cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  top: -75px;
+  width:50px;
+  color:#f3f3f3;
+  background-color: #666666;
+  display: inline-block;
+  border: 1px solid #666666;
+  padding:2px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #666666 transparent transparent transparent;
 }
 
 .save-amt::-moz-range-thumb {

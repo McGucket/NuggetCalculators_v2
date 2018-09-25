@@ -61,13 +61,21 @@ function createSlider() {
     slider.setAttribute("id", "save-amt");
     slider.setAttribute("min", "0");
     slider.setAttribute("max", maxVal);
-    slider.setAttribute("value", null);
+    slider.setAttribute("value", 0);
     document.getElementById("slider-field").appendChild(slider);
 }
 
 function snapSavingsValue() {
     let snapVal = document.getElementById("value").value;
     let slider = document.getElementById("save-amt");
+    var tooltip = document.getElementById("tooltip");
+    var salaryAmt = sessionStorage.getItem("salary-amt");
+    let shiftVal = snapVal * (604 / salaryAmt);
+    let percentage = snapVal * (100 / salaryAmt);
+    parseFloat(percentage);
+    percentage = Math.floor(percentage);
+    tooltip.style.left = shiftVal + "px";
+    tooltip.innerHTML = percentage + "%";
 
     slider.value = snapVal;
 }
